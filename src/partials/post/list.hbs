@@ -1,6 +1,7 @@
 <article itemscope itemtype="http://schema.org/BlogPosting"
   role="article" class="post-item {{post_class}}">
   <header class="post-item-header">
+    <p><a href={{"url"}}><img src="{{img_url feature_image}}"/></a></p>
     <h2 itemprop="name" class="post-item-title">
       <a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">
         {{{title}}}
@@ -8,7 +9,7 @@
     </h2>
   </header>
   <section itemprop="description" class="post-item-excerpt">
-    <p>{{excerpt words="35"}}&hellip;</p>
+    <p>{{excerpt characters="150"}}&hellip;</p>
   </section>
   <footer class="post-item-footer">
     <ul class="post-item-meta-list">
@@ -26,7 +27,7 @@
         </li>
       {{/if}}
       <li class="post-item-meta-item">
-        <a href="{{url}}#disqus_thread" data-pjax data-disqus-identifier="{{id}}">Comments</a>
+        <a href="{{url}}#disqus_thread" data-pjax data-disqus-identifier="{{comment_id}}">Comments</a>
       </li>
     </ul>
   </footer>
