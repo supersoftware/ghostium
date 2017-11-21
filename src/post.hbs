@@ -31,7 +31,9 @@
                 <a class="pocket-btn" data-pocket-label="pocket" data-pocket-count="horizontal" data-lang="en"></a>
               </li>
             </ul>
+            {{#if feature_image}}
             <p><img src="{{img_url feature_image}}"/></p>
+            {{/if}}
             <h1 itemprop="name headline" class="post-title"><a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</a></h1>
             {{! A subtitle not available in Ghosts yet }}
             <!--h2 itemprop="about" class="post-subtitle"></h2-->
