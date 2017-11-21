@@ -24,6 +24,14 @@
                 <a href="#disqus_thread" data-disqus-identifier="{{comment_id}}">Comments</a>
               </li>
             </ul>
+            <ul class="post-meta-list">
+              <li class="post-meta-item">
+                <div class="fb-share-button" 
+                  data-href="{{url}}" 
+                  data-layout="button_count">
+                </div>
+              </li>
+            </ul>
             <p><img src="{{img_url feature_image}}"/></p>
             <h1 itemprop="name headline" class="post-title"><a href="{{url}}" itemprop="url" data-pjax title="{{{title}}}">{{{title}}}</a></h1>
             {{! A subtitle not available in Ghosts yet }}
@@ -136,3 +144,13 @@
     document.querySelector('.post-comments').remove();
   }
 </script>
+
+<!-- Load Facebook SDK for JavaScript -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
