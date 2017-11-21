@@ -26,10 +26,7 @@
             </ul>
             <ul class="post-meta-list">
               <li class="post-meta-item">
-                <div class="fb-share-button" 
-                  data-href="{{url}}" 
-                  data-layout="button_count">
-                </div>
+                <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
               </li>
             </ul>
             <p><img src="{{img_url feature_image}}"/></p>
@@ -145,12 +142,11 @@
   }
 </script>
 
-<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+  js.src = 'https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v2.11&appId=128009694537428';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
