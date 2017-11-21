@@ -21,7 +21,11 @@
   }
 }
 
-.post-item-header {}
+.post-item-header {
+  > p {
+    text-align: center;
+  }
+}
 
 .post-item-title {
   line-height: 1.1;
