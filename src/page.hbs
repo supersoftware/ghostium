@@ -12,17 +12,19 @@
           </header>
           <aside class="post-side">
             <div class="post-author">
-              {{#if author.profile_image}}
-                <a href="{{author.url}}" class="post-author-avatar">
-                  <img src="{{author.profile_image}}" alt="{{author.name}}">
+              {{#author}}
+              {{#if profile_image}}
+                <a href="{{url}}" class="post-author-avatar">
+                  <img src="{{profile_image}}" alt="{{name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
-                <a href="{{author.url}}" class="post-author-name">
-                  {{author.name}}
+                <a href="{{url}}" class="post-author-name">
+                  {{name}}
                 </a>
-                <p class="post-author-bio">{{author.bio}}</p>
+                <p class="post-author-bio">{{bio}}</p>
               </div>
+              {{/author}}
             </div>
           </aside>
           <div itemprop="articleBody" class="post-body">
@@ -30,18 +32,20 @@
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
-              {{#if author.profile_image}}
-                <a href="{{author.url}}" class="post-author-avatar">
-                  <img itemprop="image" src="{{author.profile_image}}" alt="{{author.name}}">
+              {{#author}}
+              {{#if profile_image}}
+                <a href="{{url}}" class="post-author-avatar">
+                  <img itemprop="image" src="{{profile_image}}" alt="{{name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
                 <h4 class="post-footer-heading">Written By</h4>
-                <a href="{{author.url}}" itemprop="url" class="post-author-name">
-                  <span itemprop="name">{{author.name}}</span>
+                <a href="{{url}}" itemprop="url" class="post-author-name">
+                  <span itemprop="name">{{name}}</span>
                 </a>
-                <p itemprop="description" class="post-author-bio">{{author.bio}}</p>
+                <p itemprop="description" class="post-author-bio">{{bio}}</p>
               </div>
+              {{/author}}
             </div>
             <div class="post-social">
               <h4 class="post-footer-heading">Spread the word</h4>
