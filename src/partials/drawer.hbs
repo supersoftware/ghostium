@@ -4,6 +4,11 @@
     <!--.drawer-search(role="search")-->
     <ul role="navigation" class="drawer-list">
       {{> custom/navigation this}}
+      {{#foreach navigation}}
+      <li class="drawer-list-item">
+        <a href="{{url absolute="true"}}">{{label}}</a>
+      </li>
+      {{/foreach}}
     </ul>
   </div>
 </nav>
