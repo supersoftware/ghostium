@@ -31,41 +31,65 @@
           </header>
           <aside class="post-side">
             <div class="post-author">
-              {{#if author.profile_image}}
-                <a href="{{author.url}}" class="post-author-avatar">
-                  <img src="{{author.profile_image}}" alt="{{author.name}}">
+              {{#author}}
+              {{#if profile_image}}
+                <a href="{{url}}" class="post-author-avatar">
+                  <img src="{{profile_image}}" alt="{{name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
-                <a href="{{author.url}}" class="post-author-name">
-                  {{author.name}}
+                <a href="{{url}}" class="post-author-name">
+                  {{name}}
                 </a>
-                <p class="post-author-bio">{{author.bio}}</p>
+                <p class="post-author-bio">{{bio}}</p>
               </div>
+              {{/author}}
             </div>
           </aside>
           <div itemprop="articleBody" class="post-body">
             {{content}}
           </div>
+          <div>
+            <!-- Begin MailChimp Signup Form -->
+            <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+            <style type="text/css">
+              #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
+              /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
+                We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
+            </style>
+            <div id="mc_embed_signup">
+            <form action="https://supersoftware.us17.list-manage.com/subscribe/post?u=fe7078ebce511139278792f04&amp;id=195d96c9a1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <div id="mc_embed_signup_scroll">
+              
+              <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fe7078ebce511139278792f04_195d96c9a1" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                </div>
+            </form>
+            </div>
+            <!--End mc_embed_signup-->
+          </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
-              {{#if author.profile_image}}
-                <a href="{{author.url}}" class="post-author-avatar">
-                  <img itemprop="image" src="{{author.profile_image}}" alt="{{author.name}}">
+              {{#author}}
+              {{#if profile_image}}
+                <a href="{{url}}" class="post-author-avatar">
+                  <img itemprop="image" src="{{profile_image}}" alt="{{name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
                 <h4 class="post-footer-heading">Written By</h4>
-                <a href="{{author.url}}" itemprop="url" class="post-author-name">
-                  <span itemprop="name">{{author.name}}</span>
+                <a href="{{url}}" itemprop="url" class="post-author-name">
+                  <span itemprop="name">{{name}}</span>
                 </a>
-                <p itemprop="description" class="post-author-bio">{{author.bio}}</p>
-                {{#if author.location}}
-                  <p class="post-author-location">{{author.location}}</p>
+                <p itemprop="description" class="post-author-bio">{{bio}}</p>
+                {{#if location}}
+                  <p class="post-author-location">{{location}}</p>
                 {{/if}}
-                {{#if author.url}}
+                {{#if url}}
                   <p class="post-author-website">
-                    <a href="{{author.url}}" rel="nofollow">{{author.url}}</a>
+                    <a href="{{url}}" rel="nofollow">{{url}}</a>
                   </p>
                 {{/if}}
                 <p class="post-info">
@@ -73,6 +97,7 @@
                   <time class="post-date">{{date format='MMMM DD, YYYY'}}</time>
                 </p>
               </div>
+              {{/author}}
             </div>
             <div class="post-social">
               <h4 class="post-footer-heading">Spread the word</h4>
@@ -83,27 +108,6 @@
           </footer>
         </section>
       {{/post}}
-      <section>
-        <!-- Begin MailChimp Signup Form -->
-        <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
-        <style type="text/css">
-          #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; width:100%;}
-          /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-            We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-        </style>
-        <div id="mc_embed_signup">
-        <form action="https://supersoftware.us17.list-manage.com/subscribe/post?u=fe7078ebce511139278792f04&amp;id=195d96c9a1" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-            <div id="mc_embed_signup_scroll">
-          
-          <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_fe7078ebce511139278792f04_195d96c9a1" tabindex="-1" value=""></div>
-            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-            </div>
-        </form>
-        </div>
-        <!--End mc_embed_signup-->
-      </section>
       <section itemprop="comment" class="post-comments">
         <div id="disqus_thread"></div>
       </section>
