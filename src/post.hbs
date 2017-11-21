@@ -32,12 +32,12 @@
           <aside class="post-side">
             <div class="post-author">
               {{#if author.profile_image}}
-                <a href="{{author.website}}" class="post-author-avatar">
+                <a href="{{author.url}}" class="post-author-avatar">
                   <img src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
-                <a href="{{author.website}}" class="post-author-name">
+                <a href="{{author.url}}" class="post-author-name">
                   {{author.name}}
                 </a>
                 <p class="post-author-bio">{{author.bio}}</p>
@@ -50,22 +50,22 @@
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
               {{#if author.profile_image}}
-                <a href="{{author.website}}" class="post-author-avatar">
+                <a href="{{author.url}}" class="post-author-avatar">
                   <img itemprop="image" src="{{author.profile_image}}" alt="{{author.name}}">
                 </a>
               {{/if}}
               <div class="post-author-info">
                 <h4 class="post-footer-heading">Written By</h4>
-                <a href="{{author.website}}" itemprop="url" class="post-author-name">
+                <a href="{{author.url}}" itemprop="url" class="post-author-name">
                   <span itemprop="name">{{author.name}}</span>
                 </a>
                 <p itemprop="description" class="post-author-bio">{{author.bio}}</p>
                 {{#if author.location}}
                   <p class="post-author-location">{{author.location}}</p>
                 {{/if}}
-                {{#if author.website}}
+                {{#if author.url}}
                   <p class="post-author-website">
-                    <a href="{{author.website}}" rel="nofollow">{{author.website}}</a>
+                    <a href="{{author.url}}" rel="nofollow">{{author.url}}</a>
                   </p>
                 {{/if}}
                 <p class="post-info">
